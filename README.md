@@ -36,21 +36,24 @@ Start the server script and check for errors.
 Open a browser and navigate to http://127.0.0.1:8000 (or the assigned port).
 
 ## PROGRAM:
-'''
+```
 
 from http.server import HTTPServer, BaseHTTPRequestHandler
 content = """
+<!DOCTYPE html>html>
 <html>
      <head>
-         <title>This pc</title>
+         <title>
+              sample web page
+         </title>
     </head>
     <body>
-        <h1>Device specification-25015770</h1>
+        <h1> align="center">Device specification-abilasha</h1>
     <table border="3" cellspacing="5" cellspacing="5">
       <tr>
-          <td>S.no</td>
-          <td>Device name</td>
-          <td>Description</td>
+          <th bgcolor="pink">S.no</th>
+          <th bgcolor="pink">Device specification</th>
+          <th bgcolor="pink">type</th>
         </tr>
         <tr>
             <td>1</td>
@@ -61,12 +64,12 @@ content = """
              <td>2</td>
              <td>RAM</td>
              <td>16.00 GB (15.5 GB usable)</td>
-            </tr>
-            <tr>
+        </tr>
+         <tr>
                 <td>2</td>
                 <td>RAM</td>
                 <td>(16.00 GB usable)</td>
-            </tr>
+         </tr>
 
         </table>
 
@@ -84,7 +87,7 @@ server_address = ('',8000)
 httpd = HTTPServer(server_address,myhandler)
 print("my webserver is running...")
 httpd.serve_forever()
-'''
+```
 
 ## OUTPUT:
 ![alt text](<Screenshot (17)-1.png>)
